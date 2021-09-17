@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: whitesmoke;
+}
+
+header {
+  height: 35px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  width: 100%;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin: 0 10px;
+}
+
+#sidebar__activator {
+  cursor: pointer;
+  padding: 5px;
+  transition: .3s linear;
+}
+
+#sidebar__activator:hover {
+ background-color: #3f3f3f;
+}
+
+#sidebar {
+  height: calc(100vh - 35px);
+  position: absolute;
+  z-index: 5;
+  width: 150px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: .3s ease-in-out;
+}
+
+.sidebar__items {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid whitesmoke;
+  margin-bottom: 10px;
+  background-color: #3f3f3f;
+  cursor: pointer;
+}
+
+.sidebar__items:hover {
+  background-color: #6f6f6f;
+}
+
+.products-container {
+  padding: 30px;
+}
+
+.products-container h2 {
+  margin-bottom: 50px;
+  font-size: 3em;
+}
+
+.categories h4 {
+  font-size: 2em;
+}
+
+.products {
+  display: flex;
+}
+
+.product {
+  height: 300px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  position: relative;
+  color: white;
+  box-shadow: -2px 10px 10px 9px rgba(0, 0, 0, 0.082);
+  cursor: pointer;
+  transition: .2s linear;
+  font-weight: bold;
+}
+
+.product:hover {
+  transform: scale(1.1);
+}
+
+.product .product__image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+ 
+}
+
+.product__image img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product .product__name {
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #1f1f1f5b;
+}
+
+.product .product__price {
+ height: 35px;
+ position: absolute;
+ bottom: 4px;
+ right: 4px;
+ padding: 10px;
+ background-color: #54ad0afb;
+ text-align: right;
+ border-radius: 3px;
+}
+
